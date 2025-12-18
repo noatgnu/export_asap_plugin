@@ -4,6 +4,7 @@ plugin:
   description: "Exports ASAP files from an SDRF file."
   version: "1.0.0"
   category: "utilities"
+  repository: "https://github.com/noatgnu/export_asap_plugin"
 
 runtime:
   type: "python"

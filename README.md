@@ -1,8 +1,13 @@
 # Export ASAP
 
+
+**[⬇️ Install in Cauldron](cauldron://install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin)**
+
+> Click the link above to install this plugin directly in Cauldron, or manually install using: `https://github.com/noatgnu/export_asap_plugin`
+
 **ID**: `export-asap`  
 **Version**: 1.0.0  
-**Category**: export  
+**Category**: utilities  
 **Author**: 
 
 ## Description
@@ -143,11 +148,18 @@ Full name of the Principal Investigator.
 |------|------|------|--------|-------------|
 | `output_dir` | `.` |  |  |  |
 
+## Requirements
+
+- **Python**: >=3.8
+- **Additional Packages**:
+  - sdrf_pipelines
+  - pandas
+
 ## Usage
 
 ### Via UI
 
-1. Navigate to **export** → **Export ASAP**
+1. Navigate to **utilities** → **Export ASAP**
 2. Fill in the required inputs
 3. Click **Run Analysis**
 
