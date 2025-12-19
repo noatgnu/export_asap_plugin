@@ -1,9 +1,18 @@
 # Export ASAP
 
 
-**[⬇️ Install in Cauldron](cauldron://install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin)**
+## Installation
 
-> Click the link above to install this plugin directly in Cauldron, or manually install using: `https://github.com/noatgnu/export_asap_plugin`
+<a href="cauldron://install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin">⬇️ <strong>Click here to install in Cauldron</strong></a>
+
+> **Repository**: `https://github.com/noatgnu/export_asap_plugin`
+
+**Manual installation:**
+
+1. Open Cauldron
+2. Go to **Plugins** → **Install from Repository**
+3. Paste: `https://github.com/noatgnu/export_asap_plugin`
+4. Click **Install**
 
 **ID**: `export-asap`  
 **Version**: 1.0.0  
