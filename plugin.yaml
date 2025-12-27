@@ -7,7 +7,7 @@ plugin:
   repository: "https://github.com/noatgnu/export_asap_plugin"
 
 runtime:
-  type: "python"
+  environments: ["python"]
   script: "export_asap.py"
 
 inputs:
