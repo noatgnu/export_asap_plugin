@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plugin Documentation</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -39,15 +43,22 @@
         a:hover {
             text-decoration: underline;
         }
-        code, pre {
+        code {
             background: #f5f5f5;
             padding: 2px 6px;
             border-radius: 3px;
             font-family: 'Courier New', monospace;
+            font-size: 0.9em;
         }
         pre {
+            background: #f5f5f5;
             padding: 15px;
+            border-radius: 4px;
             overflow-x: auto;
+        }
+        pre code {
+            background: none;
+            padding: 0;
         }
         blockquote {
             border-left: 4px solid #2196f3;
@@ -60,188 +71,7 @@
         }
         table {
             border-collapse: collapse;
-            width: 100%!;(string=<h1>Export ASAP</h1>
-<br>
-<br>
-<h2>Installation</h2>
-<br>
-<a href="cauldron://install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin">⬇️ <strong>Click here to install in Cauldron</strong></a>
-<br>
-<p>&gt; **Repository**: `https://github.com/noatgnu/export_asap_plugin`</p>
-<br>
-<p>**Manual installation:**</p>
-<br>
-<li>Open Cauldron</li>
-<li>Go to **Plugins** → **Install from Repository**</li>
-<li>Paste: `https://github.com/noatgnu/export_asap_plugin`</li>
-<li>Click **Install**</li>
-<br>
-<p>**ID**: `export-asap`  </p>
-<p>**Version**: 1.0.0  </p>
-<p>**Category**: utilities  </p>
-<p>**Author**: </p>
-<br>
-<h2>Description</h2>
-<br>
-<p>Exports ASAP files from an SDRF file.</p>
-<br>
-<h2>Runtime</h2>
-<br>
-<li>**Type**: `python`</li>
-<li>**Script**: `export_asap.py`</li>
-<br>
-<h2>Inputs</h2>
-<br>
-| Name | Label | Type | Required | Default | Visibility |
-<p>|------|-------|------|----------|---------|------------|</p>
-| `sdrf_file` | SDRF File | file | Yes | - | Always visible |
-| `asap_team_name` | ASAP Team Name | text | No | Alessi | Always visible |
-| `asap_lab_name` | ASAP Lab Name | text | No | Dario Alessi | Always visible |
-| `pi_full_name` | PI Full Name | text | No | Dario R. Alessi | Always visible |
-| `project_name` | Project Name | text | No |  | Always visible |
-| `project_description` | Project Description | text | No |  | Always visible |
-| `dataset_title` | Dataset Title | text | No |  | Always visible |
-| `dataset_description` | Dataset Description | text | No |  | Always visible |
-| `dataset_name` | Dataset Name | text | No |  | Always visible |
-| `pi_email` | PI Email | text | No |  | Always visible |
-| `contributor_names` | Contributor Names | text | No |  | Always visible |
-| `submitter_name` | Submitter Name | text | No |  | Always visible |
-| `submitter_email` | Submitter Email | text | No |  | Always visible |
-| `asap_grant_id` | ASAP Grant ID | text | No |  | Always visible |
-| `other_funding_source` | Other Funding Source | text | No |  | Always visible |
-| `publication_doi` | Publication DOI | text | No |  | Always visible |
-| `publication_pmid` | Publication PMID | text | No |  | Always visible |
-| `number_samples` | Number of Samples | text | No |  | Always visible |
-| `sample_types` | Sample Types | text | No |  | Always visible |
-| `types_of_samples` | Types of Samples | text | No |  | Always visible |
-| `metadata_tables` | Metadata Tables | text | No | SDRF.tsv | Always visible |
-| `dua_version` | DUA Version | text | No |  | Always visible |
-| `pi_orcid` | PI ORCID | text | No |  | Always visible |
-| `pi_google_scholar_id` | PI Google Scholar ID | text | No |  | Always visible |
-| `preprocessing_references` | Preprocessing References | text | No |  | Always visible |
-| `metadata_version_date` | Metadata Version Date | text | No |  | Always visible |
-| `alternate_dataset_id` | Alternate Dataset ID | text | No |  | Always visible |
-<br>
-<h3>Input Details</h3>
-<br>
-<h4>SDRF File (`sdrf_file`)</h4>
-<br>
-<p>The input SDRF file in .tsv format.</p>
-<br>
-<br>
-<h4>ASAP Team Name (`asap_team_name`)</h4>
-<br>
-<p>Name of the ASAP team.</p>
-<br>
-<br>
-<h4>ASAP Lab Name (`asap_lab_name`)</h4>
-<br>
-<p>Name of the ASAP lab.</p>
-<br>
-<br>
-<h4>PI Full Name (`pi_full_name`)</h4>
-<br>
-<p>Full name of the Principal Investigator.</p>
-<br>
-<br>
-<h4>Project Name (`project_name`)</h4>
-<br>
-<br>
-<h4>Project Description (`project_description`)</h4>
-<br>
-<br>
-<h4>Dataset Title (`dataset_title`)</h4>
-<br>
-<br>
-<h4>Dataset Description (`dataset_description`)</h4>
-<br>
-<br>
-<h4>Dataset Name (`dataset_name`)</h4>
-<br>
-<br>
-<h4>PI Email (`pi_email`)</h4>
-<br>
-<br>
-<h4>Contributor Names (`contributor_names`)</h4>
-<br>
-<br>
-<h4>Submitter Name (`submitter_name`)</h4>
-<br>
-<br>
-<h4>Submitter Email (`submitter_email`)</h4>
-<br>
-<br>
-<h4>ASAP Grant ID (`asap_grant_id`)</h4>
-<br>
-<br>
-<h4>Other Funding Source (`other_funding_source`)</h4>
-<br>
-<br>
-<h4>Publication DOI (`publication_doi`)</h4>
-<br>
-<br>
-<h4>Publication PMID (`publication_pmid`)</h4>
-<br>
-<br>
-<h4>Number of Samples (`number_samples`)</h4>
-<br>
-<br>
-<h4>Sample Types (`sample_types`)</h4>
-<br>
-<br>
-<h4>Types of Samples (`types_of_samples`)</h4>
-<br>
-<br>
-<h4>Metadata Tables (`metadata_tables`)</h4>
-<br>
-<br>
-<h4>DUA Version (`dua_version`)</h4>
-<br>
-<br>
-<h4>PI ORCID (`pi_orcid`)</h4>
-<br>
-<br>
-<h4>PI Google Scholar ID (`pi_google_scholar_id`)</h4>
-<br>
-<br>
-<h4>Preprocessing References (`preprocessing_references`)</h4>
-<br>
-<br>
-<h4>Metadata Version Date (`metadata_version_date`)</h4>
-<br>
-<br>
-<h4>Alternate Dataset ID (`alternate_dataset_id`)</h4>
-<br>
-<br>
-<h2>Outputs</h2>
-<br>
-| Name | File | Type | Format | Description |
-<p>|------|------|------|--------|-------------|</p>
-| `output_dir` | `.` |  |  |  |
-<br>
-<h2>Requirements</h2>
-<br>
-<li>**Python**: &gt;=3.8</li>
-<li>**Additional Packages**:</li>
-<p>  - sdrf_pipelines</p>
-<p>  - pandas</p>
-<br>
-<h2>Usage</h2>
-<br>
-<h3>Via UI</h3>
-<br>
-<li>Navigate to **utilities** → **Export ASAP**</li>
-<li>Fill in the required inputs</li>
-<li>Click **Run Analysis**</li>
-<br>
-<h3>Via Plugin System</h3>
-<br>
-<p>```typescript</p>
-<p>const jobId = await pluginService.executePlugin('export-asap', {</p>
-<p>  // Add parameters here</p>
-<p>});</p>
-<p>```</p>
-<br>)
+            width: 100%;
             margin: 15px 0;
         }
         th, td {
@@ -257,26 +87,351 @@
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+        ul, ol {
+            padding-left: 25px;
+        }
         li {
             margin: 5px 0;
         }
-        .install-button {
-            display: inline-block;
-            background: #4caf50;
-            color: white !important;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
+        strong {
+            font-weight: 600;
+            color: #1976d2;
         }
-        .install-button:hover {
-            background: #45a049;
-            text-decoration: none;
+        .mermaid {
+            text-align: center;
+            margin: 20px 0;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
         }
     </style>
 </head>
 <body>
-%!s(MISSING)
+<h1 id="export-asap">Export ASAP</h1>
+<h2 id="installation">Installation</h2>
+<p><a href="cauldron://install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin">⬇️ <strong>Click here to install in Cauldron</strong></a></p>
+<blockquote>
+<p><strong>Repository</strong>: <code>https://github.com/noatgnu/export_asap_plugin</code></p>
+</blockquote>
+<p><strong>Manual installation:</strong></p>
+<ol>
+<li>Open Cauldron</li>
+<li>Go to <strong>Plugins</strong> → <strong>Install from Repository</strong></li>
+<li>Paste: <code>https://github.com/noatgnu/export_asap_plugin</code></li>
+<li>Click <strong>Install</strong></li>
+</ol>
+<p><strong>ID</strong>: <code>export-asap</code><br>
+<strong>Version</strong>: 1.0.0<br>
+<strong>Category</strong>: utilities<br>
+<strong>Author</strong>:</p>
+<h2 id="description">Description</h2>
+<p>Exports ASAP files from an SDRF file.</p>
+<h2 id="runtime">Runtime</h2>
+<ul>
+<li>
+<p><strong>Environments</strong>: <code>python</code></p>
+</li>
+<li>
+<p><strong>Entrypoint</strong>: <code>export_asap.py</code></p>
+</li>
+</ul>
+<h2 id="inputs">Inputs</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Label</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Visibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sdrf_file</code></td>
+<td>SDRF File</td>
+<td>file</td>
+<td>Yes</td>
+<td>-</td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>asap_team_name</code></td>
+<td>ASAP Team Name</td>
+<td>text</td>
+<td>No</td>
+<td>Alessi</td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>asap_lab_name</code></td>
+<td>ASAP Lab Name</td>
+<td>text</td>
+<td>No</td>
+<td>Dario Alessi</td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>pi_full_name</code></td>
+<td>PI Full Name</td>
+<td>text</td>
+<td>No</td>
+<td>Dario R. Alessi</td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>project_name</code></td>
+<td>Project Name</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>project_description</code></td>
+<td>Project Description</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>dataset_title</code></td>
+<td>Dataset Title</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>dataset_description</code></td>
+<td>Dataset Description</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>dataset_name</code></td>
+<td>Dataset Name</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>pi_email</code></td>
+<td>PI Email</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>contributor_names</code></td>
+<td>Contributor Names</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>submitter_name</code></td>
+<td>Submitter Name</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>submitter_email</code></td>
+<td>Submitter Email</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>asap_grant_id</code></td>
+<td>ASAP Grant ID</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>other_funding_source</code></td>
+<td>Other Funding Source</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>publication_doi</code></td>
+<td>Publication DOI</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>publication_pmid</code></td>
+<td>Publication PMID</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>number_samples</code></td>
+<td>Number of Samples</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>sample_types</code></td>
+<td>Sample Types</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>types_of_samples</code></td>
+<td>Types of Samples</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>metadata_tables</code></td>
+<td>Metadata Tables</td>
+<td>text</td>
+<td>No</td>
+<td>SDRF.tsv</td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>dua_version</code></td>
+<td>DUA Version</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>pi_orcid</code></td>
+<td>PI ORCID</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>pi_google_scholar_id</code></td>
+<td>PI Google Scholar ID</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>preprocessing_references</code></td>
+<td>Preprocessing References</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>metadata_version_date</code></td>
+<td>Metadata Version Date</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+<tr>
+<td><code>alternate_dataset_id</code></td>
+<td>Alternate Dataset ID</td>
+<td>text</td>
+<td>No</td>
+<td></td>
+<td>Always visible</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-details">Input Details</h3>
+<h4 id="sdrf-file-sdrf-file">SDRF File (<code>sdrf_file</code>)</h4>
+<p>The input SDRF file in .tsv format.</p>
+<h4 id="asap-team-name-asap-team-name">ASAP Team Name (<code>asap_team_name</code>)</h4>
+<p>Name of the ASAP team.</p>
+<h4 id="asap-lab-name-asap-lab-name">ASAP Lab Name (<code>asap_lab_name</code>)</h4>
+<p>Name of the ASAP lab.</p>
+<h4 id="pi-full-name-pi-full-name">PI Full Name (<code>pi_full_name</code>)</h4>
+<p>Full name of the Principal Investigator.</p>
+<h4 id="project-name-project-name">Project Name (<code>project_name</code>)</h4>
+<h4 id="project-description-project-description">Project Description (<code>project_description</code>)</h4>
+<h4 id="dataset-title-dataset-title">Dataset Title (<code>dataset_title</code>)</h4>
+<h4 id="dataset-description-dataset-description">Dataset Description (<code>dataset_description</code>)</h4>
+<h4 id="dataset-name-dataset-name">Dataset Name (<code>dataset_name</code>)</h4>
+<h4 id="pi-email-pi-email">PI Email (<code>pi_email</code>)</h4>
+<h4 id="contributor-names-contributor-names">Contributor Names (<code>contributor_names</code>)</h4>
+<h4 id="submitter-name-submitter-name">Submitter Name (<code>submitter_name</code>)</h4>
+<h4 id="submitter-email-submitter-email">Submitter Email (<code>submitter_email</code>)</h4>
+<h4 id="asap-grant-id-asap-grant-id">ASAP Grant ID (<code>asap_grant_id</code>)</h4>
+<h4 id="other-funding-source-other-funding-source">Other Funding Source (<code>other_funding_source</code>)</h4>
+<h4 id="publication-doi-publication-doi">Publication DOI (<code>publication_doi</code>)</h4>
+<h4 id="publication-pmid-publication-pmid">Publication PMID (<code>publication_pmid</code>)</h4>
+<h4 id="number-of-samples-number-samples">Number of Samples (<code>number_samples</code>)</h4>
+<h4 id="sample-types-sample-types">Sample Types (<code>sample_types</code>)</h4>
+<h4 id="types-of-samples-types-of-samples">Types of Samples (<code>types_of_samples</code>)</h4>
+<h4 id="metadata-tables-metadata-tables">Metadata Tables (<code>metadata_tables</code>)</h4>
+<h4 id="dua-version-dua-version">DUA Version (<code>dua_version</code>)</h4>
+<h4 id="pi-orcid-pi-orcid">PI ORCID (<code>pi_orcid</code>)</h4>
+<h4 id="pi-google-scholar-id-pi-google-scholar-id">PI Google Scholar ID (<code>pi_google_scholar_id</code>)</h4>
+<h4 id="preprocessing-references-preprocessing-references">Preprocessing References (<code>preprocessing_references</code>)</h4>
+<h4 id="metadata-version-date-metadata-version-date">Metadata Version Date (<code>metadata_version_date</code>)</h4>
+<h4 id="alternate-dataset-id-alternate-dataset-id">Alternate Dataset ID (<code>alternate_dataset_id</code>)</h4>
+<h2 id="outputs">Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>File</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>output_dir</code></td>
+<td><code>.</code></td>
+<td>data</td>
+<td></td>
+<td>Output directory containing exported ASAP files</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<h3 id="via-ui">Via UI</h3>
+<ol>
+<li>Navigate to <strong>utilities</strong> → <strong>Export ASAP</strong></li>
+<li>Fill in the required inputs</li>
+<li>Click <strong>Run Analysis</strong></li>
+</ol>
+<h3 id="via-plugin-system">Via Plugin System</h3>
+<pre><code class="language-typescript">const jobId = await pluginService.executePlugin('export-asap', {
+  // Add parameters here
+});
+</code></pre>
+
 </body>
 </html>

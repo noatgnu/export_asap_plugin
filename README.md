@@ -25,8 +25,9 @@ Exports ASAP files from an SDRF file.
 
 ## Runtime
 
-- **Type**: `python`
-- **Script**: `export_asap.py`
+- **Environments**: `python`
+
+- **Entrypoint**: `export_asap.py`
 
 ## Inputs
 
@@ -155,14 +156,7 @@ Full name of the Principal Investigator.
 
 | Name | File | Type | Format | Description |
 |------|------|------|--------|-------------|
-| `output_dir` | `.` |  |  |  |
-
-## Requirements
-
-- **Python**: >=3.8
-- **Additional Packages**:
-  - sdrf_pipelines
-  - pandas
+| `output_dir` | `.` | data |  | Output directory containing exported ASAP files |
 
 ## Usage
 

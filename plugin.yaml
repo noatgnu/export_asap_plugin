@@ -5,17 +5,21 @@ plugin:
   version: "1.0.0"
   category: "utilities"
   repository: "https://github.com/noatgnu/export_asap_plugin"
+  requirements:
+    - "sdrf_pipelines"
+    - "pandas"
 
 runtime:
   environments: ["python"]
-  script: "export_asap.py"
+  entrypoint: "export_asap.py"
 
 inputs:
   - name: "sdrf_file"
     label: "SDRF File"
     type: "file"
     required: true
-    accept: ".tsv"
+    file_types:
+      - ".tsv"
     description: "The input SDRF file in .tsv format."
 
   - name: "asap_team_name"
@@ -129,10 +133,6 @@ inputs:
     type: "text"
     default: ""
 
-outputs:
-  - name: "output_dir"
-    path: "."
-
 execution:
   argsMapping:
     sdrf_file: "--sdrf_file"
@@ -164,8 +164,8 @@ execution:
     alternate_dataset_id: "--alternate_dataset_id"
   outputDir: "--output_dir"
 
-  requirements:
-    python: ">=3.8"
-    packages:
-      - "sdrf_pipelines"
-      - "pandas"
+outputs:
+  - name: "output_dir"
+    path: "."
+    type: "data"
+    description: "Output directory containing exported ASAP files"
