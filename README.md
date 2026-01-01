@@ -3,7 +3,7 @@
 
 ## Installation
 
-**[⬇️ Click here to install in Cauldron](http://localhost:42069/install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin)** _(requires Cauldron to be running)_
+**[⬇️ Click here to install in Cauldron](http://localhost:50060/install?repo=https%3A%2F%2Fgithub.com%2Fnoatgnu%2Fexport_asap_plugin)** _(requires Cauldron to be running)_
 
 > **Repository**: `https://github.com/noatgnu/export_asap_plugin`
 
