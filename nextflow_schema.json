@@ -1,0 +1,233 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Export ASAP pipeline parameters",
+    "description": "Exports ASAP files from an SDRF file.",
+    "type": "object",
+    "definitions": {
+        "plugin_parameters": {
+            "title": "Plugin parameters",
+            "description": "Parameters for the Export ASAP plugin.",
+            "type": "object",
+            "properties": {
+                "alternate_dataset_id": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "asap_grant_id": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "asap_lab_name": {
+                    "type": "string",
+                    "description": "Name of the ASAP lab.",
+                    "default": "Dario Alessi"
+                },
+                "asap_team_name": {
+                    "type": "string",
+                    "description": "Name of the ASAP team.",
+                    "default": "Alessi"
+                },
+                "contributor_names": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "dataset_description": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "dataset_name": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "dataset_title": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "dua_version": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "metadata_tables": {
+                    "type": "string",
+                    "description": "",
+                    "default": "SDRF.tsv"
+                },
+                "metadata_version_date": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "number_samples": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "other_funding_source": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "pi_email": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "pi_full_name": {
+                    "type": "string",
+                    "description": "Full name of the Principal Investigator.",
+                    "default": "Dario R. Alessi"
+                },
+                "pi_google_scholar_id": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "pi_orcid": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "preprocessing_references": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "project_description": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "project_name": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "publication_doi": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "publication_pmid": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "sample_types": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "sdrf_file": {
+                    "type": "string",
+                    "description": "The input SDRF file in .tsv format.",
+                    "format": "file-path"
+                },
+                "submitter_email": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "submitter_name": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                },
+                "types_of_samples": {
+                    "type": "string",
+                    "description": "",
+                    "default": ""
+                }
+            }
+        }
+    },
+    "properties": {
+        "alternate_dataset_id": {
+            "$ref": "#/definitions/plugin_parameters/properties/alternate_dataset_id"
+        },
+        "asap_grant_id": {
+            "$ref": "#/definitions/plugin_parameters/properties/asap_grant_id"
+        },
+        "asap_lab_name": {
+            "$ref": "#/definitions/plugin_parameters/properties/asap_lab_name"
+        },
+        "asap_team_name": {
+            "$ref": "#/definitions/plugin_parameters/properties/asap_team_name"
+        },
+        "contributor_names": {
+            "$ref": "#/definitions/plugin_parameters/properties/contributor_names"
+        },
+        "dataset_description": {
+            "$ref": "#/definitions/plugin_parameters/properties/dataset_description"
+        },
+        "dataset_name": {
+            "$ref": "#/definitions/plugin_parameters/properties/dataset_name"
+        },
+        "dataset_title": {
+            "$ref": "#/definitions/plugin_parameters/properties/dataset_title"
+        },
+        "dua_version": {
+            "$ref": "#/definitions/plugin_parameters/properties/dua_version"
+        },
+        "metadata_tables": {
+            "$ref": "#/definitions/plugin_parameters/properties/metadata_tables"
+        },
+        "metadata_version_date": {
+            "$ref": "#/definitions/plugin_parameters/properties/metadata_version_date"
+        },
+        "number_samples": {
+            "$ref": "#/definitions/plugin_parameters/properties/number_samples"
+        },
+        "other_funding_source": {
+            "$ref": "#/definitions/plugin_parameters/properties/other_funding_source"
+        },
+        "pi_email": {
+            "$ref": "#/definitions/plugin_parameters/properties/pi_email"
+        },
+        "pi_full_name": {
+            "$ref": "#/definitions/plugin_parameters/properties/pi_full_name"
+        },
+        "pi_google_scholar_id": {
+            "$ref": "#/definitions/plugin_parameters/properties/pi_google_scholar_id"
+        },
+        "pi_orcid": {
+            "$ref": "#/definitions/plugin_parameters/properties/pi_orcid"
+        },
+        "preprocessing_references": {
+            "$ref": "#/definitions/plugin_parameters/properties/preprocessing_references"
+        },
+        "project_description": {
+            "$ref": "#/definitions/plugin_parameters/properties/project_description"
+        },
+        "project_name": {
+            "$ref": "#/definitions/plugin_parameters/properties/project_name"
+        },
+        "publication_doi": {
+            "$ref": "#/definitions/plugin_parameters/properties/publication_doi"
+        },
+        "publication_pmid": {
+            "$ref": "#/definitions/plugin_parameters/properties/publication_pmid"
+        },
+        "sample_types": {
+            "$ref": "#/definitions/plugin_parameters/properties/sample_types"
+        },
+        "sdrf_file": {
+            "$ref": "#/definitions/plugin_parameters/properties/sdrf_file"
+        },
+        "submitter_email": {
+            "$ref": "#/definitions/plugin_parameters/properties/submitter_email"
+        },
+        "submitter_name": {
+            "$ref": "#/definitions/plugin_parameters/properties/submitter_name"
+        },
+        "types_of_samples": {
+            "$ref": "#/definitions/plugin_parameters/properties/types_of_samples"
+        }
+    }
+}

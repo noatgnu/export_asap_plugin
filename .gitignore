@@ -1,0 +1,8 @@
+
+# Nextflow
+work/
+.nextflow/
+.nextflow.log*
+.nextflow.pid
+results/
+
