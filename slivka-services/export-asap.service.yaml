@@ -1,0 +1,204 @@
+# Slivka service configuration for export-asap
+# Generated from Cauldron plugin format
+#
+# For file inputs that reference large databases (e.g., FASTA databases),
+# consider configuring them as environment variables pointing to shared storage:
+#   env:
+#     DATABASE_PATH: "${SLIVKA_HOME}/databases/uniref90.fasta"
+# Then reference in args as: arg: "--db=${DATABASE_PATH}"
+
+slivka-version: "0.8"
+name: export-asap
+description: Exports ASAP files from an SDRF file.
+author: 
+version: "1.0.0"
+license: MIT
+classifiers:
+  - "Topic :: Scientific/Engineering :: Bio-Informatics"
+
+parameters:
+  sdrf_file:
+    name: "SDRF File"
+    description: "The input SDRF file in .tsv format."
+    type: file
+    required: true
+  asap_team_name:
+    name: "ASAP Team Name"
+    description: "Name of the ASAP team."
+    type: text
+    default: Alessi
+  asap_lab_name:
+    name: "ASAP Lab Name"
+    description: "Name of the ASAP lab."
+    type: text
+    default: Dario Alessi
+  pi_full_name:
+    name: "PI Full Name"
+    description: "Full name of the Principal Investigator."
+    type: text
+    default: Dario R. Alessi
+  project_name:
+    name: "Project Name"
+    description: ""
+    type: text
+  project_description:
+    name: "Project Description"
+    description: ""
+    type: text
+  dataset_title:
+    name: "Dataset Title"
+    description: ""
+    type: text
+  dataset_description:
+    name: "Dataset Description"
+    description: ""
+    type: text
+  dataset_name:
+    name: "Dataset Name"
+    description: ""
+    type: text
+  pi_email:
+    name: "PI Email"
+    description: ""
+    type: text
+  contributor_names:
+    name: "Contributor Names"
+    description: ""
+    type: text
+  submitter_name:
+    name: "Submitter Name"
+    description: ""
+    type: text
+  submitter_email:
+    name: "Submitter Email"
+    description: ""
+    type: text
+  asap_grant_id:
+    name: "ASAP Grant ID"
+    description: ""
+    type: text
+  other_funding_source:
+    name: "Other Funding Source"
+    description: ""
+    type: text
+  publication_doi:
+    name: "Publication DOI"
+    description: ""
+    type: text
+  publication_pmid:
+    name: "Publication PMID"
+    description: ""
+    type: text
+  number_samples:
+    name: "Number of Samples"
+    description: ""
+    type: text
+  sample_types:
+    name: "Sample Types"
+    description: ""
+    type: text
+  types_of_samples:
+    name: "Types of Samples"
+    description: ""
+    type: text
+  metadata_tables:
+    name: "Metadata Tables"
+    description: ""
+    type: text
+    default: SDRF.tsv
+  dua_version:
+    name: "DUA Version"
+    description: ""
+    type: text
+  pi_orcid:
+    name: "PI ORCID"
+    description: ""
+    type: text
+  pi_google_scholar_id:
+    name: "PI Google Scholar ID"
+    description: ""
+    type: text
+  preprocessing_references:
+    name: "Preprocessing References"
+    description: ""
+    type: text
+  metadata_version_date:
+    name: "Metadata Version Date"
+    description: ""
+    type: text
+  alternate_dataset_id:
+    name: "Alternate Dataset ID"
+    description: ""
+    type: text
+
+command:
+  - python
+  - export_asap.py
+
+args:
+  sdrf_file:
+    arg: "--sdrf_file=$(value)"
+    symlink: "sdrf_file"
+  asap_team_name:
+    arg: "--asap_team_name=$(value)"
+  asap_lab_name:
+    arg: "--asap_lab_name=$(value)"
+  pi_full_name:
+    arg: "--pi_full_name=$(value)"
+  project_name:
+    arg: "--project_name=$(value)"
+  project_description:
+    arg: "--project_description=$(value)"
+  dataset_title:
+    arg: "--dataset_title=$(value)"
+  dataset_description:
+    arg: "--dataset_description=$(value)"
+  dataset_name:
+    arg: "--dataset_name=$(value)"
+  pi_email:
+    arg: "--pi_email=$(value)"
+  contributor_names:
+    arg: "--contributor_names=$(value)"
+  submitter_name:
+    arg: "--submitter_name=$(value)"
+  submitter_email:
+    arg: "--submitter_email=$(value)"
+  asap_grant_id:
+    arg: "--asap_grant_id=$(value)"
+  other_funding_source:
+    arg: "--other_funding_source=$(value)"
+  publication_doi:
+    arg: "--publication_doi=$(value)"
+  publication_pmid:
+    arg: "--publication_pmid=$(value)"
+  number_samples:
+    arg: "--number_samples=$(value)"
+  sample_types:
+    arg: "--sample_types=$(value)"
+  types_of_samples:
+    arg: "--types_of_samples=$(value)"
+  metadata_tables:
+    arg: "--metadata_tables=$(value)"
+  dua_version:
+    arg: "--dua_version=$(value)"
+  pi_orcid:
+    arg: "--pi_orcid=$(value)"
+  pi_google_scholar_id:
+    arg: "--pi_google_scholar_id=$(value)"
+  preprocessing_references:
+    arg: "--preprocessing_references=$(value)"
+  metadata_version_date:
+    arg: "--metadata_version_date=$(value)"
+  alternate_dataset_id:
+    arg: "--alternate_dataset_id=$(value)"
+  _output_dir:
+    arg: "--output_dir=."
+
+outputs:
+  output_dir:
+    path: "."
+
+execution:
+  runners:
+    default:
+      type: SlivkaQueueRunner
