@@ -46,120 +46,6 @@ process EXPORT_ASAP {
     ARG_LIST=()
 
     
-    # Mapping for sdrf_file
-    VAL="$sdrf_file"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--sdrf_file" "\$VAL")
-    fi
-    
-    # Mapping for asap_team_name
-    VAL="$asap_team_name"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--asap_team_name" "\$VAL")
-    fi
-    
-    # Mapping for asap_lab_name
-    VAL="$asap_lab_name"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--asap_lab_name" "\$VAL")
-    fi
-    
-    # Mapping for asap_grant_id
-    VAL="$asap_grant_id"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--asap_grant_id" "\$VAL")
-    fi
-    
-    # Mapping for publication_pmid
-    VAL="$publication_pmid"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--publication_pmid" "\$VAL")
-    fi
-    
-    # Mapping for types_of_samples
-    VAL="$types_of_samples"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--types_of_samples" "\$VAL")
-    fi
-    
-    # Mapping for pi_google_scholar_id
-    VAL="$pi_google_scholar_id"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--pi_google_scholar_id" "\$VAL")
-    fi
-    
-    # Mapping for metadata_version_date
-    VAL="$metadata_version_date"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--metadata_version_date" "\$VAL")
-    fi
-    
-    # Mapping for pi_full_name
-    VAL="$pi_full_name"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--pi_full_name" "\$VAL")
-    fi
-    
-    # Mapping for project_name
-    VAL="$project_name"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--project_name" "\$VAL")
-    fi
-    
-    # Mapping for dataset_title
-    VAL="$dataset_title"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--dataset_title" "\$VAL")
-    fi
-    
-    # Mapping for pi_email
-    VAL="$pi_email"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--pi_email" "\$VAL")
-    fi
-    
-    # Mapping for submitter_name
-    VAL="$submitter_name"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--submitter_name" "\$VAL")
-    fi
-    
-    # Mapping for sample_types
-    VAL="$sample_types"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--sample_types" "\$VAL")
-    fi
-    
-    # Mapping for pi_orcid
-    VAL="$pi_orcid"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--pi_orcid" "\$VAL")
-    fi
-    
-    # Mapping for preprocessing_references
-    VAL="$preprocessing_references"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--preprocessing_references" "\$VAL")
-    fi
-    
-    # Mapping for project_description
-    VAL="$project_description"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--project_description" "\$VAL")
-    fi
-    
-    # Mapping for dataset_description
-    VAL="$dataset_description"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--dataset_description" "\$VAL")
-    fi
-    
-    # Mapping for dataset_name
-    VAL="$dataset_name"
-    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--dataset_name" "\$VAL")
-    fi
-    
     # Mapping for other_funding_source
     VAL="$other_funding_source"
     if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
@@ -170,6 +56,42 @@ process EXPORT_ASAP {
     VAL="$publication_doi"
     if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
         ARG_LIST+=("--publication_doi" "\$VAL")
+    fi
+    
+    # Mapping for publication_pmid
+    VAL="$publication_pmid"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--publication_pmid" "\$VAL")
+    fi
+    
+    # Mapping for number_samples
+    VAL="$number_samples"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--number_samples" "\$VAL")
+    fi
+    
+    # Mapping for project_name
+    VAL="$project_name"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--project_name" "\$VAL")
+    fi
+    
+    # Mapping for asap_grant_id
+    VAL="$asap_grant_id"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--asap_grant_id" "\$VAL")
+    fi
+    
+    # Mapping for sample_types
+    VAL="$sample_types"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--sample_types" "\$VAL")
+    fi
+    
+    # Mapping for types_of_samples
+    VAL="$types_of_samples"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--types_of_samples" "\$VAL")
     fi
     
     # Mapping for metadata_tables
@@ -184,16 +106,40 @@ process EXPORT_ASAP {
         ARG_LIST+=("--dua_version" "\$VAL")
     fi
     
-    # Mapping for alternate_dataset_id
-    VAL="$alternate_dataset_id"
+    # Mapping for metadata_version_date
+    VAL="$metadata_version_date"
     if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--alternate_dataset_id" "\$VAL")
+        ARG_LIST+=("--metadata_version_date" "\$VAL")
     fi
     
-    # Mapping for contributor_names
-    VAL="$contributor_names"
+    # Mapping for asap_team_name
+    VAL="$asap_team_name"
     if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--contributor_names" "\$VAL")
+        ARG_LIST+=("--asap_team_name" "\$VAL")
+    fi
+    
+    # Mapping for pi_full_name
+    VAL="$pi_full_name"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--pi_full_name" "\$VAL")
+    fi
+    
+    # Mapping for project_description
+    VAL="$project_description"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--project_description" "\$VAL")
+    fi
+    
+    # Mapping for dataset_description
+    VAL="$dataset_description"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--dataset_description" "\$VAL")
+    fi
+    
+    # Mapping for pi_email
+    VAL="$pi_email"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--pi_email" "\$VAL")
     fi
     
     # Mapping for submitter_email
@@ -202,10 +148,64 @@ process EXPORT_ASAP {
         ARG_LIST+=("--submitter_email" "\$VAL")
     fi
     
-    # Mapping for number_samples
-    VAL="$number_samples"
+    # Mapping for pi_orcid
+    VAL="$pi_orcid"
     if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
-        ARG_LIST+=("--number_samples" "\$VAL")
+        ARG_LIST+=("--pi_orcid" "\$VAL")
+    fi
+    
+    # Mapping for pi_google_scholar_id
+    VAL="$pi_google_scholar_id"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--pi_google_scholar_id" "\$VAL")
+    fi
+    
+    # Mapping for sdrf_file
+    VAL="$sdrf_file"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--sdrf_file" "\$VAL")
+    fi
+    
+    # Mapping for dataset_name
+    VAL="$dataset_name"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--dataset_name" "\$VAL")
+    fi
+    
+    # Mapping for preprocessing_references
+    VAL="$preprocessing_references"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--preprocessing_references" "\$VAL")
+    fi
+    
+    # Mapping for alternate_dataset_id
+    VAL="$alternate_dataset_id"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--alternate_dataset_id" "\$VAL")
+    fi
+    
+    # Mapping for asap_lab_name
+    VAL="$asap_lab_name"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--asap_lab_name" "\$VAL")
+    fi
+    
+    # Mapping for dataset_title
+    VAL="$dataset_title"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--dataset_title" "\$VAL")
+    fi
+    
+    # Mapping for contributor_names
+    VAL="$contributor_names"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--contributor_names" "\$VAL")
+    fi
+    
+    # Mapping for submitter_name
+    VAL="$submitter_name"
+    if [ -n "\$VAL" ] && [ "\$VAL" != "null" ] && [ "\$VAL" != "[]" ]; then
+        ARG_LIST+=("--submitter_name" "\$VAL")
     fi
     
     python /app/export_asap.py \

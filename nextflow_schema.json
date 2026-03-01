@@ -11,12 +11,12 @@
             "properties": {
                 "alternate_dataset_id": {
                     "type": "string",
-                    "description": "",
+                    "description": "External dataset identifier such as ProteomeXchange ID. Example: PXD042502",
                     "default": ""
                 },
                 "asap_grant_id": {
                     "type": "string",
-                    "description": "",
+                    "description": "ASAP grant identifier. Example: ASAP-000463",
                     "default": ""
                 },
                 "asap_lab_name": {
@@ -31,52 +31,52 @@
                 },
                 "contributor_names": {
                     "type": "string",
-                    "description": "",
+                    "description": "Comma-separated list of all contributors. Example: Prosenjit Pal, Matthew Taylor, Pui Yiu Lam",
                     "default": ""
                 },
                 "dataset_description": {
                     "type": "string",
-                    "description": "",
+                    "description": "Description of the dataset including experimental details. Auto-detected from SDRF if empty.",
                     "default": ""
                 },
                 "dataset_name": {
                     "type": "string",
-                    "description": "",
+                    "description": "Short identifier for the dataset. Example: VPS35_D620N_Brain_LysoIP",
                     "default": ""
                 },
                 "dataset_title": {
                     "type": "string",
-                    "description": "",
+                    "description": "Title for the dataset, often matching the publication title. Example: Parkinson's VPS35[D620N] mutation induces LRRK2-mediated lysosomal association of RILPL1 and TMEM55B",
                     "default": ""
                 },
                 "dua_version": {
                     "type": "string",
-                    "description": "",
+                    "description": "Data Use Agreement version. Use NA if not applicable.",
                     "default": ""
                 },
                 "metadata_tables": {
                     "type": "string",
-                    "description": "",
+                    "description": "Comma-separated list of metadata files. Example: SDRF.tsv, intervention.csv, STUDY.csv",
                     "default": "SDRF.tsv"
                 },
                 "metadata_version_date": {
                     "type": "string",
-                    "description": "",
+                    "description": "Date of metadata version. Format: M/D/YYYY. Example: 4/7/2025",
                     "default": ""
                 },
                 "number_samples": {
                     "type": "string",
-                    "description": "",
+                    "description": "Total number of samples. Auto-detected from SDRF if empty.",
                     "default": ""
                 },
                 "other_funding_source": {
                     "type": "string",
-                    "description": "",
+                    "description": "Additional funding sources beyond ASAP. Use NA if none.",
                     "default": ""
                 },
                 "pi_email": {
                     "type": "string",
-                    "description": "",
+                    "description": "Email address of the Principal Investigator. Example: d.r.alessi@dundee.ac.uk",
                     "default": ""
                 },
                 "pi_full_name": {
@@ -86,42 +86,42 @@
                 },
                 "pi_google_scholar_id": {
                     "type": "string",
-                    "description": "",
+                    "description": "Google Scholar ID of the PI. Use NA if not available.",
                     "default": ""
                 },
                 "pi_orcid": {
                     "type": "string",
-                    "description": "",
+                    "description": "ORCID identifier of the PI. Example: 0000-0002-2140-9185",
                     "default": ""
                 },
                 "preprocessing_references": {
                     "type": "string",
-                    "description": "",
+                    "description": "References for data preprocessing methods. Use NA if not applicable.",
                     "default": ""
                 },
                 "project_description": {
                     "type": "string",
-                    "description": "",
+                    "description": "Detailed description of the research project goals and scope.",
                     "default": ""
                 },
                 "project_name": {
                     "type": "string",
-                    "description": "",
+                    "description": "Official ASAP project name. Example: Mapping the LRRK2 Signalling Pathway and Its Interplay with Other Parkinson's Disease Components.",
                     "default": ""
                 },
                 "publication_doi": {
                     "type": "string",
-                    "description": "",
+                    "description": "DOI of the associated publication. Example: 10.1126/sciadv.adj1205",
                     "default": ""
                 },
                 "publication_pmid": {
                     "type": "string",
-                    "description": "",
+                    "description": "PubMed ID of the associated publication. Example: 38091401",
                     "default": ""
                 },
                 "sample_types": {
                     "type": "string",
-                    "description": "",
+                    "description": "Types of samples in the dataset. Example: Mouse Brain. Auto-detected from SDRF if empty.",
                     "default": ""
                 },
                 "sdrf_file": {
@@ -131,17 +131,17 @@
                 },
                 "submitter_email": {
                     "type": "string",
-                    "description": "",
+                    "description": "Email of the data submitter. Example: r.nirujogi@dundee.ac.uk",
                     "default": ""
                 },
                 "submitter_name": {
                     "type": "string",
-                    "description": "",
+                    "description": "Name of the person submitting the data. Example: Dr. Raja Nirujogi",
                     "default": ""
                 },
                 "types_of_samples": {
                     "type": "string",
-                    "description": "",
+                    "description": "Assay types in the dataset. Example: Proteomics (Organelle-IP). Auto-detected from SDRF if empty.",
                     "default": ""
                 }
             }
