@@ -5,10 +5,6 @@ plugin:
   version: "1.0.0"
   category: "utilities"
   repository: "https://github.com/noatgnu/export_asap_plugin"
-  requirements:
-    - "sdrf_pipelines"
-    - "pandas"
-
 runtime:
   environments: ["python"]
   entrypoint: "export_asap.py"
@@ -134,6 +130,8 @@ inputs:
     default: ""
 
 execution:
+  requirements:
+    pythonRequirementsFile: "requirements.txt"
   argsMapping:
     sdrf_file: "--sdrf_file"
     asap_team_name: "--asap_team_name"
